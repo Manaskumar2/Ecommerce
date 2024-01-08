@@ -8,7 +8,7 @@ export const myCache = new NodeCache()
 //importing Routes
 import userRouter from "./routes/user.js"
 import productRouter from "./routes/product.js"
-
+import addressRouter from "./routes/address.js"
 
 const app = express();
 app.use(express.json());
@@ -19,6 +19,7 @@ const port = 4000;
 
 app.use("/api/v1/users",userRouter)
 app.use("/api/v1/products",productRouter)
+app.use("/api/v1/address",addressRouter)
 
 
 app.use("/uploads", express.static("uploads"));

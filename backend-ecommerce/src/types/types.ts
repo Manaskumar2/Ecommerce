@@ -39,3 +39,24 @@ export interface BaseQuery {
   price?: { $lte: number };
   category?: string;
 }
+export type InvalidateCacheProps = {
+  product?: boolean;
+  order?: boolean;
+  shippingAddress?:boolean;
+  admin?: boolean;
+  userId?: string;
+  addressId?: string;
+  orderId?: string;
+  productId?: string | string[];
+};
+
+export interface newAdressRequestBody{
+  address: string;
+  state: string;
+  city: string;
+  country: string;
+  pinCode: number;
+  user: string;
+  name: string;
+  phoneNumber:number;
+}
